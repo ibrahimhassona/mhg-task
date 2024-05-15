@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Transition 300 */
+.transition-300 {
+  @apply transition-all duration-300;
+}
+
+/* Link Nav Btn*/
+.link-nav-btn {
+  @apply py-2 px-4 transition-300 border border-purple rounded-md text-purple font-medium hover:bg-purple hover:text-white;
+}
+/* Btn */
+.btn {
+  @apply py-2 px-4 transition-300  rounded-md text-white font-medium ;
+}
+
+/* ------------------------ Presentation in main screens ---------------- */
+.main-presentation{
+  @apply scrollw presen-abs  w-[300px] shadow-lg px-8 py-2 h-[450px] max-sm:h-[calc(100vh-35%)] max-sm:top-[55%] max-sm:w-[85%] pt-4 pb-2 overflow-y-auto flex flex-col gap-4
+}
+.presen-abs {
+  @apply absolute rounded-xl flex flex-col bg-white items-center top-[55%] left-[50%] transform -translate-x-[50%] -translate-y-[45%];
+}
+.mobile-presen {
+  @apply relative h-full;
+}
+/* Styles for each Link */
+.initial-style {
+  @apply capitalize w-full p-3 shadow-md transition-300 text-light-gray text-sm rounded-md flex justify-between items-center;
+}
+.github {
+  @apply bg-black hover:bg-gray;
+}
+.linkedin {
+  @apply bg-blue hover:bg-extra-blue;
+}
+.youtube {
+  @apply bg-red hover:bg-extra-red;
+}
+.instagram {
+  @apply bg-gradient-to-br from-red to-yellow-500 shadow-none hover:shadow-lg;
+}
+.facebook {
+  @apply bg-blue hover:bg-extra-blue;
+}
+.whatsapp {
+  @apply bg-[#0ec244] hover:bg-green-600;
+}
+.default-link {
+  @apply bg-white border border-purple text-purple hover:bg-purple hover:text-white;
+}
+/* In Editor page */
+/* ----------------Links Page --------------- */
+.customize-part-inlinks-page{
+  @apply min-h-[calc(100vh-150px)] max-h-[100vh] overflow-y-auto scrolly bg-white rounded-md p-6 flex flex-col gap-3 relative
+}
+/* Nav Links */
+.link {
+  @apply flex items-center gap-1 font-medium  p-2 rounded-md transition-300 hover:bg-[#5c3ddd3b] hover:text-extra-purple;
+}
+.active-link {
+  @apply transition-300 bg-[#5c3ddd3b] text-extra-purple;
+}
+.menu-link{
+  @apply w-full flex items-center gap-1 px-3 py-2 hover:bg-[#5c3ddd3b] transition-300 hover:text-purple justify-center rounded-md
+}
+/* Mobile Frame */
+.outer-mobile-border {
+  @apply relative h-[530px] w-[250px] border-medium-gray border m-auto rounded-[2rem] flex items-center justify-center shadow-md;
+}
+.internal-mobile-border {
+  @apply h-[calc(100%-0.65rem)] w-[calc(100%-0.65rem)] border-medium-gray border m-auto rounded-[1.7rem] flex flex-col  p-4 overflow-y-auto scrollw;
+}
+.mobile-camera {
+  @apply absolute z-20 bg-white rounded-b-lg top-[0.33rem] w-[50%]  border-medium-gray border-t-0 border h-4 left-1/2 transform -translate-x-1/2 ;
+}
+/* New Link */
+.selected-link{
+  @apply flex items-center gap-1 text-black
+}
+.top-shadow{
+  box-shadow: 0 -2px 6px -1px rgba(0, 0, 0, 0.1);
+}
+/* ------------------Profile---------------------- */
+.profile-parent{
+  @apply container grid grid-cols-[2fr,3fr]  gap-2 mt-4 max-md:flex max-md:flex-col
+}
+/* PRESENTATION PART */
+.presentation-profile{
+  @apply bg-white rounded-md p-4 min-h-[calc(100vh-150px)] flex justify-center items-center
+}
+/* CUSTOMIZE PART */
+.customize-profile{
+  @apply relative min-h-[calc(100vh-150px)] max-sm:h-[100vh] max-h-[100vh] overflow-y-auto scrolly bg-white rounded-md p-6 flex flex-col gap-3
+}
+.item{
+  @apply absolute -bottom-2 left-0 h-0 w-full cursor-pointer rounded-md transition-300 flex flex-col gap-2 items-center justify-center text-gray
+}
+.image:hover .item{
+  height:100%;
+  bottom:0;
+  background:rgb(0 0 0 / 59%);
+}
+.style-input{
+  @apply text-black outline-none text-sm w-[70%]  border border-light-gray rounded-md  p-2 max-sm:text-xs max-sm:w-[80%]
+}
+.input-shadow:focus{
+  @apply focus:shadow-indigo-500 focus:shadow-sm focus:border-purple transition-300
+}
+.wrong-shadow:focus{
+  @apply focus:shadow-red focus:shadow-sm focus:border-red transition-300
+}
+
+/* --------------------End Profile------------------ */
+/* -------------------- Module ---------------- */
+.module{
+  @apply  transition-300 absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-[calc(100%-20px)] h-full rounded-md z-20
+}
+.module-link{
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] p-2 bg-light-gray rounded-md shadow-md
+}
+.url-input-module{
+  @apply focus:shadow-sm focus:outline-none  text-black transition-300 bg-white border border-light-gray rounded-md text-sm w-full p-2 pl-8
+}
+/* If the content has a lot of links it will display as scroll */
+.scrollw {
+  overflow-x: hidden;
+}
+/* in Chrome and Safari */
+.scrollw::-webkit-scrollbar {
+  width: 0; /* Setting the width of the scrollbar */
+}
+/*(WebKit)  Chrome Safari */
+.scrolly::-webkit-scrollbar {
+  width: 1px; 
+  background-color: transparent;
+}
+.scrolly::-webkit-scrollbar-thumb {
+  background-color: light-gray; 
+}
+/* Firefox */
+.scrolly {
+  scrollbar-width: thin; 
+  scrollbar-color: light-gray transparent; 
+}
