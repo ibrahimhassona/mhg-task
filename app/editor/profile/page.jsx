@@ -123,7 +123,7 @@ const Page = () => {
                 placeholder="FirstName"
                 id="firstName"
                 type="text"
-                name="FirstName"
+                name="firstName"
                 value={localContent.firstName}
                 onChange={(e) => handleInputChange(e)}
                 className={`${
